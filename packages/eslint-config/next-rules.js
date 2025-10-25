@@ -98,16 +98,6 @@ export const sharedRules = {
     },
   ],
 
-  // Import Rules
-  "import/order": [
-    "error",
-    {
-      alphabetize: { order: "asc", caseInsensitive: true },
-      groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
-      pathGroupsExcludedImportTypes: ["builtin"],
-    },
-  ],
-
   // Prettier Integration
   "prettier/prettier": "warn",
 };
