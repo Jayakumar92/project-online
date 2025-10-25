@@ -11,7 +11,8 @@ import globals from "globals";
 import pluginNext from "@next/eslint-plugin-next";
 import { config as baseConfig } from "./base.js";
 import pluginImport from "eslint-plugin-import";
-import { sharedRules } from "./shared-rules.js"; // Assuming sharedRules are imported from here
+
+import { sharedRules } from "./shared-rules.js";
 
 /**
  * A custom ESLint configuration for libraries that use Next.js.

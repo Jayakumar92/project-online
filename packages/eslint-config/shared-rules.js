@@ -1,4 +1,4 @@
-export const sharedRules = {
+export const tsRules = {
   // Core JS/TS Rules
   "no-duplicate-imports": "error",
   "no-var": "error",
@@ -10,7 +10,7 @@ export const sharedRules = {
       skipComments: true,
     },
   ],
-  "no-unused-vars": "off", // handled by @typescript-eslint/no-unused-vars
+  "no-unused-vars": "off",
   "no-console": [
     "error",
     {
@@ -22,6 +22,48 @@ export const sharedRules = {
   "no-else-return": ["error", { allowElseIf: false }],
   "no-loop-func": "error",
 
+  // TypeScript Rules
+  "@typescript-eslint/no-shadow": "error",
+  "no-shadow": "off",
+  "no-undef": "off",
+  "no-useless-computed-key": "error",
+  "no-useless-rename": "error",
+  "object-shorthand": "error",
+  "prefer-arrow-callback": "error",
+  "prefer-const": "error",
+  "prefer-numeric-literals": "warn",
+  "prefer-rest-params": "warn",
+  "no-return-await": "error",
+  "require-await": "error",
+  "no-unused-expressions": "error",
+  curly: "error",
+
+  "@typescript-eslint/array-type": ["warn", { default: "array" }],
+  "@typescript-eslint/consistent-type-assertions": [
+    "warn",
+    { assertionStyle: "as", objectLiteralTypeAssertions: "never" },
+  ],
+  "@typescript-eslint/no-explicit-any": "off",
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    {
+      vars: "all",
+      args: "none",
+      ignoreRestSiblings: false,
+      varsIgnorePattern: "^_",
+    },
+  ],
+
+  // Prettier Integration
+  "prettier/prettier": [
+    "warn",
+    {
+      singleQuote: true,
+    },
+  ],
+};
+
+export const reactRules = {
   // React Rules
   "react/no-unstable-nested-components": ["error", { allowAsProps: true }],
   "react/function-component-definition": [
@@ -61,45 +103,10 @@ export const sharedRules = {
   "react/jsx-filename-extension": ["warn", { extensions: [".ts", ".tsx"] }],
   "react-hooks/exhaustive-deps": "off",
   "react/prop-types": "off", // redundant with TypeScript
-
-  // TypeScript Rules
-  "@typescript-eslint/no-shadow": "error",
-  "no-shadow": "off",
-  "no-undef": "off",
-  "no-useless-computed-key": "error",
-  "no-useless-rename": "error",
-  "object-shorthand": "error",
-  "prefer-arrow-callback": "error",
-  "prefer-const": "error",
-  "prefer-numeric-literals": "warn",
-  "prefer-rest-params": "warn",
   "react/no-array-index-key": "error",
-  "no-return-await": "error",
-  "require-await": "error",
-  "no-unused-expressions": "error",
-  curly: "error",
+};
 
-  "@typescript-eslint/array-type": ["warn", { default: "array" }],
-  "@typescript-eslint/consistent-type-assertions": [
-    "warn",
-    { assertionStyle: "as", objectLiteralTypeAssertions: "never" },
-  ],
-  "@typescript-eslint/no-explicit-any": "off",
-  "@typescript-eslint/no-unused-vars": [
-    "error",
-    {
-      vars: "all",
-      args: "none",
-      ignoreRestSiblings: false,
-      varsIgnorePattern: "^_",
-    },
-  ],
-
-  // Prettier Integration
-  "prettier/prettier": [
-    "warn",
-    {
-      singleQuote: true,
-    },
-  ],
+export const sharedRules = {
+  ...tsRules,
+  ...reactRules,
 };

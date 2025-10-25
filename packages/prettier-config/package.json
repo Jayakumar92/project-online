@@ -5,7 +5,8 @@
   "exports": {
     "./base": "./base.js",
     "./next-js": "./next.js",
-    "./native-js": "./native.js"
+    "./native-js": "./native.js",
+    "./server-js": "./server.js"
   },
   "license": "MIT",
   "publishConfig": {

@@ -11,7 +11,7 @@ import pluginImport from "eslint-plugin-import";
 import pluginExpo from "eslint-plugin-expo";
 import pluginReactNative from "eslint-plugin-react-native";
 
-import { sharedRules } from "./shared-rules.js"; // Assuming sharedRules are imported from here
+import { sharedRules } from "./shared-rules.js";
 
 /**
  * A custom ESLint configuration for libraries that use Next.js.
