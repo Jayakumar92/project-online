@@ -10,12 +10,12 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+    "*.{js,ts,tsx}": [
+      "pnpm run lint --",
+      "pnpm run format"
     ],
-    "*.{json,md,css,scss}": [
-      "prettier --write"
+    "*.json": [
+      "pnpm run format"
     ]
   },
   "devDependencies": {
