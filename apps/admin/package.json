@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
-    "format": "prettier --write ."
+    "lint": "eslint"
   },
   "dependencies": {
     "react": "19.2.0",
