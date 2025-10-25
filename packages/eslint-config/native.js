@@ -1,5 +1,3 @@
-// eslint.config.mjs (or the file where nextJsConfig is defined)
-
 import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
@@ -8,9 +6,11 @@ import tseslint from "typescript-eslint";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginReact from "eslint-plugin-react";
 import globals from "globals";
-import pluginNext from "@next/eslint-plugin-next";
 import { config as baseConfig } from "./base.js";
 import pluginImport from "eslint-plugin-import";
+import pluginExpo from "eslint-plugin-expo";
+import pluginReactNative from "eslint-plugin-react-native";
+
 import { sharedRules } from "./shared-rules.js"; // Assuming sharedRules are imported from here
 
 /**
@@ -18,7 +18,7 @@ import { sharedRules } from "./shared-rules.js"; // Assuming sharedRules are imp
  *
  * @type {import("eslint").Linter.Config[]}
  */
-export const nextJsConfig = [
+export const nativeJsConfig = [
   // 1. Base Configuration (Should be loaded first)
   ...baseConfig,
 
@@ -55,20 +55,19 @@ export const nextJsConfig = [
     },
   },
 
-  // 7. 🎯 Final Consolidated Rules (Next.js + React + Custom)
-  // This object includes all necessary plugins and applies all rules and overrides.
   {
     plugins: {
-      "@next/next": pluginNext,
       react: pluginReact,
       "react-hooks": pluginReactHooks,
       import: pluginImport,
+      "react-native": pluginReactNative,
+      expo: pluginExpo,
     },
     settings: { react: { version: "detect" } },
     rules: {
+      ...pluginReactNative.configs.all.rules,
+
       // 1. Load Next.js rule sets first
-      ...pluginNext.configs.recommended.rules,
-      ...pluginNext.configs["core-web-vitals"].rules,
 
       // 2. Load your custom rules/overrides last to ensure precedence
       ...sharedRules,

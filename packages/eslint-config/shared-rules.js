@@ -1,7 +1,4 @@
 export const sharedRules = {
-  // Next.js Overrides
-  "@next/next/no-img-element": "off",
-
   // Core JS/TS Rules
   "no-duplicate-imports": "error",
   "no-var": "error",
