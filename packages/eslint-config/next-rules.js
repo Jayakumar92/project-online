@@ -99,5 +99,10 @@ export const sharedRules = {
   ],
 
   // Prettier Integration
-  "prettier/prettier": "warn",
+  "prettier/prettier": [
+    "warn",
+    {
+      singleQuote: true,
+    },
+  ],
 };
