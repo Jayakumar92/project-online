@@ -10,15 +10,17 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "pnpm run lint --",
-      "pnpm run format"
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
     ],
-    "*.json": [
-      "pnpm run format"
+    "*.{json,md,css,scss,html}": [
+      "prettier --write"
     ]
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
