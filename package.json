@@ -4,16 +4,16 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "eslint \"**/*.{ts,tsx}\"",
-    "lint:all": "turbo run lint --",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "lint:all": "eslint \"apps/**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,json}\"",
     "check-types": "turbo run check-types",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
+    "*.{js,ts,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
     ],
     "*.json": [
       "prettier --write"
@@ -22,11 +22,13 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "turbo": "^2.5.8",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "eslint": "^9"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
