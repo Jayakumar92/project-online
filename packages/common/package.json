@@ -40,6 +40,7 @@
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
     "@types/node": "^20.11.24",
     "tsup": "^8.0.2",
     "typescript": "5.5.4"

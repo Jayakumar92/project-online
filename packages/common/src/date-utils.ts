@@ -61,9 +61,8 @@ export const displayFormatFromNow = (
 
   if (Math.abs(diff) > 7) {
     return format(date, type);
-  } else {
-    return dayjs(date).fromNow();
   }
+  return dayjs(date).fromNow();
 };
 
 export const formatNow = (date: string, type: keyof typeof DATE_FORMATS = 'D_MMM_YYYY') => {
@@ -71,7 +70,6 @@ export const formatNow = (date: string, type: keyof typeof DATE_FORMATS = 'D_MMM
 
   if (Math.abs(diff) > 7) {
     return format(date, type);
-  } else {
-    return dayjs(date).fromNow();
   }
+  return dayjs(date).fromNow();
 };

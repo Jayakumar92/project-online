@@ -9,7 +9,8 @@
     "./nest-js": "./nest.js",
     "./react-internal": "./react-internal.js",
     "./library": "./library.js",
-    "./native": "./native.js"
+    "./native": "./native.js",
+    "./ts-base": "./ts-base.js"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

@@ -1,7 +1,5 @@
 import { z } from 'zod';
 
-let isMac: boolean | undefined;
-
 export function paginationHandler(type: 'next' | 'prev' | 'current', position: number) {
   const page = type === 'next' ? position + 1 : type === 'prev' ? position - 1 : position;
   return page;

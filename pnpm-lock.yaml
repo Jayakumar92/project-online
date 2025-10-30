@@ -304,6 +304,9 @@ importers:
         specifier: ^3.24.1
         version: 3.25.76
     devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config
