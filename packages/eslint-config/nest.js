@@ -24,7 +24,9 @@ export const nestJsConfig = [
   // 4. Prettier Base Configs (Must come before the final rules block)
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
-
+  {
+    ignores: ["**/*.config.mjs", "prettier.config.mjs"],
+  },
   {
     languageOptions: {
       globals: {

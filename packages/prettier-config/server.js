@@ -45,8 +45,8 @@ const config = {
   // 2. Plugin Settings (Global)
   importOrderSeparation: false,
   importOrderSortSpecifiers: true,
-  importOrderBuiltinModulesToTop: true, // Ensures Node built-ins are first
-  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+  importOrderBuiltinModulesToTop: true,
+  importOrderParserPlugins: ["typescript", "decorators-legacy"],
   importOrderMergeDuplicateImports: true,
   importOrderCombineTypeAndValueImports: true,
 
