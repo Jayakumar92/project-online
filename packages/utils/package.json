@@ -1,32 +1,32 @@
 {
-  "name": "@repo/common",
+  "name": "@repo/utils",
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./constants": {
-      "import": "./dist/constants.mjs",
-      "require": "./dist/constants.js",
-      "types": "./dist/constants.d.ts"
+    "./collections": {
+      "import": "./dist/collections.mjs",
+      "require": "./dist/collections.js",
+      "types": "./dist/collections.d.ts"
     },
-    "./types": {
-      "import": "./dist/types.mjs",
-      "require": "./dist/types.js",
-      "types": "./dist/types.d.ts"
-    },
-    "./validations": {
-      "import": "./dist/validations.mjs",
-      "require": "./dist/validations.js",
-      "types": "./dist/validations.d.ts"
+    "./dates": {
+      "import": "./dist/dates.mjs",
+      "require": "./dist/dates.js",
+      "types": "./dist/dates.d.ts"
     },
     "./helpers": {
       "import": "./dist/helpers.mjs",
       "require": "./dist/helpers.js",
       "types": "./dist/helpers.d.ts"
     },
-    "./date-utils": {
-      "import": "./dist/date-utils.mjs",
-      "require": "./dist/date-utils.js",
-      "types": "./dist/date-utils.d.ts"
+    "./strings": {
+      "import": "./dist/strings.mjs",
+      "require": "./dist/strings.js",
+      "types": "./dist/strings.d.ts"
+    },
+    "./validations": {
+      "import": "./dist/validations.mjs",
+      "require": "./dist/validations.js",
+      "types": "./dist/validations.d.ts"
     }
   },
   "files": [
