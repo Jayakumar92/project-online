@@ -1,18 +1,15 @@
-import Image from 'next/image';
+'use client';
+
+import { APP_NAME } from '@repo/core/constants';
+import { useAppStore } from '@repo/store';
+import { getInitials } from '@repo/utils/strings';
 
 export default function Home() {
+  const theme = useAppStore((state) => state.theme);
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-      </main>
-    </div>
+    <section className="flex h-dvh w-100 items-center justify-center text-center">
+      <h6>{getInitials(APP_NAME)}</h6>
+      <h6>{theme}</h6>
+    </section>
   );
 }
