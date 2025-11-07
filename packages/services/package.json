@@ -1,14 +1,22 @@
 {
-  "name": "@repo/store",
+  "name": "@repo/services",
   "version": "0.0.0",
   "private": true,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+    "./api": {
+      "import": "./dist/api.mjs",
+      "require": "./dist/api.js",
+      "types": "./dist/api.d.ts"
+    },
+    "./axios": {
+      "import": "./dist/axios.mjs",
+      "require": "./dist/axios.js",
+      "types": "./dist/axios.d.ts"
+    },
+    "./fetch": {
+      "import": "./dist/fetch.mjs",
+      "require": "./dist/fetch.js",
+      "types": "./dist/fetch.d.ts"
     }
   },
   "files": [
@@ -28,6 +36,6 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
-    "zustand": "^5.0.8"
+    "axios": "^1.13.1"
   }
 }
