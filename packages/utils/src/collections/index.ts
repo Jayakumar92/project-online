@@ -6,6 +6,8 @@ export function ifObjectExist(value: object) {
   return is_valid;
 }
 
+const name = 'ArrayItem';
+
 type ArrayItem<T> = {
   [K in keyof T]: T[K];
 };
