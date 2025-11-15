@@ -18,7 +18,7 @@ import { sharedRules } from "./shared-rules.js";
  *
  * @type {import("eslint").Linter.Config[]}
  */
-export const nativeJsConfig = [
+export const reactJsConfig = [
   // 1. Base Configuration (Should be loaded first)
   ...baseConfig,
 

@@ -4,19 +4,19 @@
   "private": true,
   "exports": {
     "./api": {
+      "types": "./dist/api.d.ts",
       "import": "./dist/api.mjs",
-      "require": "./dist/api.js",
-      "types": "./dist/api.d.ts"
+      "require": "./dist/api.js"
     },
     "./axios": {
+      "types": "./dist/axios.d.ts",
       "import": "./dist/axios.mjs",
-      "require": "./dist/axios.js",
-      "types": "./dist/axios.d.ts"
+      "require": "./dist/axios.js"
     },
     "./fetch": {
+      "types": "./dist/fetch.d.ts",
       "import": "./dist/fetch.mjs",
-      "require": "./dist/fetch.js",
-      "types": "./dist/fetch.d.ts"
+      "require": "./dist/fetch.js"
     }
   },
   "files": [

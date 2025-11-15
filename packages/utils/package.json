@@ -4,29 +4,29 @@
   "private": true,
   "exports": {
     "./collections": {
+      "types": "./dist/collections.d.ts",
       "import": "./dist/collections.mjs",
-      "require": "./dist/collections.js",
-      "types": "./dist/collections.d.ts"
+      "require": "./dist/collections.js"
     },
     "./dates": {
+      "types": "./dist/dates.d.ts",
       "import": "./dist/dates.mjs",
-      "require": "./dist/dates.js",
-      "types": "./dist/dates.d.ts"
+      "require": "./dist/dates.js"
     },
     "./helpers": {
+      "types": "./dist/helpers.d.ts",
       "import": "./dist/helpers.mjs",
-      "require": "./dist/helpers.js",
-      "types": "./dist/helpers.d.ts"
+      "require": "./dist/helpers.js"
     },
     "./strings": {
+      "types": "./dist/strings.d.ts",
       "import": "./dist/strings.mjs",
-      "require": "./dist/strings.js",
-      "types": "./dist/strings.d.ts"
+      "require": "./dist/strings.js"
     },
     "./validations": {
+      "types": "./dist/validations.d.ts",
       "import": "./dist/validations.mjs",
-      "require": "./dist/validations.js",
-      "types": "./dist/validations.d.ts"
+      "require": "./dist/validations.js"
     }
   },
   "files": [

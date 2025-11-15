@@ -1,0 +1,71 @@
+{
+  "name": "@repo/features",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./auth/components": {
+      "types": "./dist/auth/components/index.d.ts",
+      "import": "./dist/auth/components/index.mjs",
+      "require": "./dist/auth/components/index.js"
+    },
+    "./auth/hooks": {
+      "types": "./dist/auth/hooks/index.d.ts",
+      "import": "./dist/auth/hooks/index.mjs",
+      "require": "./dist/auth/hooks/index.js"
+    },
+    "./auth/api": {
+      "types": "./dist/auth/api/index.d.ts",
+      "import": "./dist/auth/api/index.mjs",
+      "require": "./dist/auth/api/index.js"
+    },
+    "./auth/types": {
+      "types": "./dist/auth/types/index.d.ts",
+      "import": "./dist/auth/types/index.mjs",
+      "require": "./dist/auth/types/index.js"
+    },
+    "./auth/native/components": {
+      "types": "./dist/auth/native/components/index.d.ts",
+      "import": "./dist//auth/native/components/index.mjs",
+      "require": "./dist//auth/native/components/index.js"
+    },
+    "./auth/native/containers": {
+      "types": "./dist/auth/native/containers/index.d.ts",
+      "import": "./dist/auth/native/containers/index.mjs",
+      "require": "./dist/auth/native/containers/index.js"
+    },
+    "./auth/web/components": {
+      "types": "./dist/auth/web/components/index.d.ts",
+      "import": "./dist//auth/web/components/index.mjs",
+      "require": "./dist//auth/web/components/index.js"
+    },
+    "./auth/web/containers": {
+      "types": "./dist/auth/web/containers/index.d.ts",
+      "import": "./dist/auth/web/containers/index.mjs",
+      "require": "./dist/auth/web/containers/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20.11.24",
+    "tsup": "^8.0.2",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@repo/core": "workspace:*",
+    "@repo/services": "workspace:*",
+    "@repo/store": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}

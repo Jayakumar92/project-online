@@ -4,19 +4,19 @@
   "private": true,
   "exports": {
     "./constants": {
+      "types": "./dist/constants.d.ts",
       "import": "./dist/constants.mjs",
-      "require": "./dist/constants.js",
-      "types": "./dist/constants.d.ts"
+      "require": "./dist/constants.js"
     },
     "./types": {
+      "types": "./dist/types.d.ts",
       "import": "./dist/types.mjs",
-      "require": "./dist/types.js",
-      "types": "./dist/types.d.ts"
+      "require": "./dist/types.js"
     },
     "./validations": {
+      "types": "./dist/validations.d.ts",
       "import": "./dist/validations.mjs",
-      "require": "./dist/validations.js",
-      "types": "./dist/validations.d.ts"
+      "require": "./dist/validations.js"
     }
   },
   "files": [

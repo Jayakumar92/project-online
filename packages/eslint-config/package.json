@@ -9,7 +9,7 @@
     "./nest-js": "./nest.js",
     "./react-internal": "./react-internal.js",
     "./library": "./library.js",
-    "./native": "./native.js",
+    "./react": "./react.js",
     "./ts-base": "./ts-base.js"
   },
   "devDependencies": {
