@@ -11,18 +11,28 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@eslint/js": "^9.8.0",
     "@nx/eslint": "^22.3.3",
+    "@nx/eslint-plugin": "22.3.3",
     "@nx/js": "^22.3.3",
     "@nx/next": "^22.3.3",
     "@nx/node": "^22.3.3",
     "@nx/workspace": "^22.3.3",
     "@repo/prettier-config": "workspace:*",
-    "eslint": "^9",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@types/node": "20.19.9",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^10.0.0",
     "husky": "^9.1.7",
+    "jsonc-eslint-parser": "^2.1.0",
     "lint-staged": "^16.2.6",
     "nx": "^22.3.3",
     "prettier": "^3.6.2",
-    "typescript": "5.9.2"
+    "tslib": "^2.3.0",
+    "typescript": "5.9.2",
+    "typescript-eslint": "^8.40.0"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
@@ -35,5 +45,6 @@
     "**/*.{js,ts,tsx}": [
       "eslint --fix --max-warnings=0"
     ]
-  }
+  },
+  "dependencies": {}
 }

@@ -1,14 +1,23 @@
 {
   "extends": ["@repo/typescript-config/nextjs.json", "../../tsconfig.base.json"],
   "compilerOptions": {
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@repo/core/*": ["../../packages/core/dist/*"]
+      "@repo/core": ["../../libs/core/src"],
+      "@repo/core/*": ["../../libs/core/src/*"],
+      "@repo/store": ["../../libs/store/src"],
+      "@repo/store/*": ["../../libs/store/src/*"],
+      "@repo/utils": ["../../libs/utils/src"],
+      "@repo/utils/*": ["../../libs/utils/src/*"],
+      "@repo/services": ["../../libs/services/src"],
+      "@repo/services/*": ["../../libs/services/src/*"],
+      "@repo/features": ["../../libs/features/src"],
+      "@repo/features/*": ["../../libs/features/src/*"]
     }
   },
   "include": [

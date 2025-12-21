@@ -1,9 +1,22 @@
 {
-  "extends": "expo/tsconfig.base",
+  "extends": ["expo/tsconfig.base", "../../tsconfig.base.json"],
   "compilerOptions": {
     "strict": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@repo/core": ["../../libs/core/src"],
+      "@repo/core/*": ["../../libs/core/src/*"],
+      "@repo/store": ["../../libs/store/src"],
+      "@repo/store/*": ["../../libs/store/src/*"],
+      "@repo/utils": ["../../libs/utils/src"],
+      "@repo/utils/*": ["../../libs/utils/src/*"],
+      "@repo/services": ["../../libs/services/src"],
+      "@repo/services/*": ["../../libs/services/src/*"],
+      "@repo/features": ["../../libs/features/src"],
+      "@repo/features/*": ["../../libs/features/src/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]

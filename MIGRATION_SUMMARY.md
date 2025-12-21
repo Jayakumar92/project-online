@@ -38,8 +38,8 @@ This document explains all the changes made during the migration from Turborepo 
 **Key Changes**:
 
 - **`paths`**: Maps workspace package imports to their source locations
-  - `@repo/core/*` → `packages/core/src/*`
-  - `@repo/utils/*` → `packages/utils/src/*`
+  - `@repo/core/*` → `libs/core/src/*`
+  - `@repo/utils/*` → `libs/utils/src/*`
   - Similar mappings for all packages
 
 **Why**: Nx requires a base tsconfig for proper TypeScript path resolution across the monorepo.
@@ -55,13 +55,13 @@ This document explains all the changes made during the migration from Turborepo 
 - `apps/api/project.json`
 - `apps/native/project.json`
 
-#### Packages:
+#### Libraries:
 
-- `packages/core/project.json`
-- `packages/utils/project.json`
-- `packages/store/project.json`
-- `packages/services/project.json`
-- `packages/features/project.json`
+- `libs/core/project.json`
+- `libs/utils/project.json`
+- `libs/store/project.json`
+- `libs/services/project.json`
+- `libs/features/project.json`
 
 **Purpose**: Defines project-specific targets and configuration
 
@@ -126,7 +126,7 @@ This document explains all the changes made during the migration from Turborepo 
 - **Added**: Path mappings for workspace packages:
   ```json
   "paths": {
-    "@repo/core/*": ["../../packages/core/dist/*"]
+    "@repo/core/*": ["../../libs/core/dist/*"]
   }
   ```
 
@@ -141,11 +141,11 @@ This document explains all the changes made during the migration from Turborepo 
 - **Added**: `transpilePackages` configuration:
   ```typescript
   transpilePackages: [
-    "@repo/core",
-    "@repo/utils",
-    "@repo/store",
-    "@repo/services",
-    "@repo/features",
+    '@repo/core',
+    '@repo/utils',
+    '@repo/store',
+    '@repo/services',
+    '@repo/features',
   ];
   ```
 
@@ -181,11 +181,11 @@ This document explains all the changes made during the migration from Turborepo 
 
 Deleted from:
 
-- `packages/core/turbo.json`
-- `packages/utils/turbo.json`
-- `packages/store/turbo.json`
-- `packages/services/turbo.json`
-- `packages/features/turbo.json`
+- `libs/core/turbo.json`
+- `libs/utils/turbo.json`
+- `libs/store/turbo.json`
+- `libs/services/turbo.json`
+- `libs/features/turbo.json`
 
 **Why**: Nx uses `project.json` files instead of individual `turbo.json` files. The configuration is now centralized in `nx.json` with project-specific settings in `project.json`.
 

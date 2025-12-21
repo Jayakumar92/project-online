@@ -4,7 +4,7 @@ This is an Nx-powered monorepo for a full-stack application with multiple apps a
 
 ## What's inside?
 
-This monorepo includes the following packages/apps:
+This monorepo includes the following apps and libraries:
 
 ### Apps
 
@@ -13,7 +13,7 @@ This monorepo includes the following packages/apps:
 - `api`: A [NestJS](https://nestjs.com/) backend API
 - `native`: A [React Native/Expo](https://expo.dev/) mobile application
 
-### Packages
+### Libraries
 
 - `@repo/core`: Shared constants, types, and validations
 - `@repo/utils`: Utility functions and helpers
@@ -24,7 +24,7 @@ This monorepo includes the following packages/apps:
 - `@repo/typescript-config`: Shared TypeScript configurations
 - `@repo/prettier-config`: Shared Prettier configurations
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each app/library is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 

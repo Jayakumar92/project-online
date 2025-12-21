@@ -1,12 +1,19 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": ["@repo/typescript-config/nextjs.json", "../../tsconfig.base.json"],
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@repo/store": ["../../packages/store/src/index.ts"],
-      "@repo/core/*": ["../../packages/core/src/*"],
-      "@repo/utils/*": ["../../packages/utils/src/*"],
-      "@repo/services/*": ["../../packages/services/src/*"]
+      "@repo/core": ["../../libs/core/src"],
+      "@repo/core/*": ["../../libs/core/src/*"],
+      "@repo/store": ["../../libs/store/src"],
+      "@repo/store/*": ["../../libs/store/src/*"],
+      "@repo/utils": ["../../libs/utils/src"],
+      "@repo/utils/*": ["../../libs/utils/src/*"],
+      "@repo/services": ["../../libs/services/src"],
+      "@repo/services/*": ["../../libs/services/src/*"],
+      "@repo/features": ["../../libs/features/src"],
+      "@repo/features/*": ["../../libs/features/src/*"]
     },
     "plugins": [
       {
