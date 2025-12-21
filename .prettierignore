@@ -1,0 +1,13 @@
+# Generated files
+**/next-env.d.ts
+**/.next/**
+**/dist/**
+**/node_modules/**
+
+# Build outputs
+**/build/**
+
+# Cache
+**/.nx/**
+**/.turbo/**
+

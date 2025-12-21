@@ -1,5 +1,23 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "🔍 Running lint-staged before commit..."
-pnpm lint-staged
+echo "🔍 Running pre-commit checks..."
+
+echo "📝 Checking code formatting..."
+pnpm format:check || {
+  echo "⚠️  Prettier check failed. Files will be auto-formatted by lint-staged."
+}
+
+echo "🔎 Running type check on affected projects..."
+pnpm nx affected --target=typecheck || {
+  echo "❌ Type check failed. Please fix type errors before committing."
+  exit 1
+}
+
+echo "✨ Running lint-staged (format & lint)..."
+pnpm lint-staged || {
+  echo "❌ Lint-staged failed. Please fix the issues above."
+  exit 1
+}
+
+echo "✅ All pre-commit checks passed!"

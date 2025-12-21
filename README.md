@@ -1,135 +1,141 @@
-# Turborepo starter
+# Nx Monorepo
 
-This Turborepo starter is maintained by the Turborepo core team.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
+This is an Nx-powered monorepo for a full-stack application with multiple apps and shared packages.
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+This monorepo includes the following packages/apps:
 
-### Apps and Packages
+### Apps
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `admin`: A [Next.js](https://nextjs.org/) admin application
+- `web`: A [Next.js](https://nextjs.org/) web application
+- `api`: A [NestJS](https://nestjs.com/) backend API
+- `native`: A [React Native/Expo](https://expo.dev/) mobile application
+
+### Packages
+
+- `@repo/core`: Shared constants, types, and validations
+- `@repo/utils`: Utility functions and helpers
+- `@repo/store`: State management (Zustand)
+- `@repo/services`: API client services
+- `@repo/features`: Feature modules and components
+- `@repo/eslint-config`: Shared ESLint configurations
+- `@repo/typescript-config`: Shared TypeScript configurations
+- `@repo/prettier-config`: Shared Prettier configurations
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
-This Turborepo has some additional tools already setup for you:
+This monorepo has the following tools configured:
 
+- [Nx](https://nx.dev/) for monorepo management and task orchestration
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [pnpm](https://pnpm.io/) as the package manager
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- pnpm >= 9.0.0
+
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
+```
 
 ### Build
 
-To build all apps and packages, run the following command:
+To build all apps and packages:
 
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+```bash
+pnpm build
+# or
+pnpm nx run-many --target=build --all
 ```
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+To build a specific project:
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+```bash
+pnpm nx run admin:build
+pnpm nx run web:build
+pnpm nx run api:build
+pnpm nx run core:build
 ```
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+To run all dev servers in parallel:
 
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+```bash
+pnpm dev
+# or
+pnpm nx run-many --target=dev --all --parallel
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+To run a specific app:
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
+```bash
+pnpm nx run admin:dev
+pnpm nx run web:dev
+pnpm nx run api:dev
+pnpm nx run native:dev
 ```
 
-### Remote Caching
+### Lint
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+To lint all projects:
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
+```bash
+pnpm lint
+# or
+pnpm nx run-many --target=lint --all
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Type Check
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+To type check all projects:
 
+```bash
+pnpm check-types
+# or
+pnpm nx run-many --target=typecheck --all
 ```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
+## Useful Nx Commands
+
+```bash
+# Show all projects
+pnpm nx show projects
+
+# Show project graph (visual)
+pnpm nx graph
+
+# Run commands for affected projects only
+pnpm nx affected:build
+pnpm nx affected:lint
+pnpm nx affected:test
+
+# Clear Nx cache
+pnpm nx reset
 ```
+
+## Documentation
+
+- [COMMANDS.md](./COMMANDS.md) - Complete command reference
+- [MIGRATION_SUMMARY.md](./MIGRATION_SUMMARY.md) - Turborepo to Nx migration details
 
 ## Useful Links
 
-Learn more about the power of Turborepo:
+Learn more about Nx:
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+- [Nx Documentation](https://nx.dev)
+- [Nx Cloud](https://nx.app) - Distributed caching and task execution
+- [Nx Console](https://nx.dev/nx-console) - VS Code extension
+- [Nx Recipes](https://nx.dev/recipes) - Common patterns and solutions

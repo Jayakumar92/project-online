@@ -2,30 +2,32 @@
   "name": "project-online",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint --",
+    "build": "nx run-many --target=build --all",
+    "dev": "nx run-many --target=dev --all --parallel",
+    "lint": "nx run-many --target=lint --all",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,json}\"",
-    "check-types": "turbo run check-types",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,json}\" --ignore-path .prettierignore",
+    "check-types": "nx run-many --target=typecheck --all",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.{js,ts,tsx}": [
-      "pnpm run format",
-      "pnpm run lint"
-    ],
-    "*.json": [
-      "pnpm run format"
+    "**/*.{js,ts,tsx,json,md}": [
+      "prettier --write --ignore-path .prettierignore"
     ]
   },
   "devDependencies": {
+    "@nx/eslint": "^22.3.3",
+    "@nx/js": "^22.3.3",
+    "@nx/next": "^22.3.3",
+    "@nx/node": "^22.3.3",
+    "@nx/workspace": "^22.3.3",
     "@repo/prettier-config": "workspace:*",
+    "eslint": "^9",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
+    "nx": "^22.3.3",
     "prettier": "^3.6.2",
-    "turbo": "^2.5.8",
-    "typescript": "5.9.2",
-    "eslint": "^9"
+    "typescript": "5.9.2"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {

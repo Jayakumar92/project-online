@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@repo/core": ["packages/core/src"],
+      "@repo/core/*": ["packages/core/src/*"],
+      "@repo/utils": ["packages/utils/src"],
+      "@repo/utils/*": ["packages/utils/src/*"],
+      "@repo/store": ["packages/store/src"],
+      "@repo/store/*": ["packages/store/src/*"],
+      "@repo/services": ["packages/services/src"],
+      "@repo/services/*": ["packages/services/src/*"],
+      "@repo/features": ["packages/features/src"],
+      "@repo/features/*": ["packages/features/src/*"]
+    },
+    "types": ["node"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules", "dist", ".next"]
+}
