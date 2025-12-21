@@ -1,6 +1,9 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# Disable interactive prompts during git hooks (prevents Nx Console installation prompt)
+export CI=true
+
 echo "🔍 Running pre-commit checks..."
 
 echo "📝 Checking code formatting..."
