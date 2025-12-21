@@ -14,7 +14,7 @@ pnpm nx affected --target=typecheck || {
   exit 1
 }
 
-echo "✨ Running lint-staged (format & lint)..."
+echo "✨ Running lint-staged (format & lint staged files)..."
 pnpm lint-staged || {
   echo "❌ Lint-staged failed. Please fix the issues above."
   exit 1

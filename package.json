@@ -10,11 +10,6 @@
     "check-types": "nx run-many --target=typecheck --all",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "**/*.{js,ts,tsx,json,md}": [
-      "prettier --write --ignore-path .prettierignore"
-    ]
-  },
   "devDependencies": {
     "@nx/eslint": "^22.3.3",
     "@nx/js": "^22.3.3",
@@ -32,5 +27,13 @@
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx,json,md}": [
+      "prettier --write --ignore-path .prettierignore"
+    ],
+    "**/*.{js,ts,tsx}": [
+      "eslint --fix --max-warnings=0"
+    ]
   }
 }
