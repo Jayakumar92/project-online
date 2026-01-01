@@ -2,7 +2,6 @@
 
 import { APP_ADMIN_NAME } from '@repo/core/constants';
 import { API_FEATURES_AUTH } from '@repo/features/auth/api';
-import { auth } from '@repo/services/api/auth';
 import { useAppStore } from '@repo/store';
 import { ifObjectExist } from '@repo/utils/collections';
 
@@ -17,7 +16,6 @@ export default function Home() {
           </div>
           <p>{ifObjectExist({ name: 'John Doe' }) + '' + theme}</p>
           <h3>{API_FEATURES_AUTH}</h3>
-          <button onClick={() => auth.login()}>{'Login'}</button>
         </div>
       </main>
     </div>
