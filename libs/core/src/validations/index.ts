@@ -1,5 +1,8 @@
 import { z } from 'zod';
 
+// Re-export zod for convenience
+export { z } from 'zod';
+
 export const errorResponseSchema = z.object({
   success: z.literal(false),
   display: z.boolean(),

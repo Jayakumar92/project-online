@@ -1,50 +1,22 @@
 {
   "name": "@repo/utils",
-  "version": "0.0.0",
   "private": true,
   "exports": {
-    "./collections": {
-      "types": "./dist/collections.d.ts",
-      "import": "./dist/collections.mjs",
-      "require": "./dist/collections.js"
-    },
-    "./dates": {
-      "types": "./dist/dates.d.ts",
-      "import": "./dist/dates.mjs",
-      "require": "./dist/dates.js"
-    },
-    "./helpers": {
-      "types": "./dist/helpers.d.ts",
-      "import": "./dist/helpers.mjs",
-      "require": "./dist/helpers.js"
-    },
-    "./strings": {
-      "types": "./dist/strings.d.ts",
-      "import": "./dist/strings.mjs",
-      "require": "./dist/strings.js"
-    },
-    "./validations": {
-      "types": "./dist/validations.d.ts",
-      "import": "./dist/validations.mjs",
-      "require": "./dist/validations.js"
+    "./*": {
+      "types": "./src/*",
+      "default": "./src/*"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
     "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
-    "tsup": "^8.0.2",
     "typescript": "5.5.4"
   },
   "dependencies": {

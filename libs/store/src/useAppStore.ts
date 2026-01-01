@@ -9,7 +9,7 @@ type AppStateType = {
 export const useAppStore = create<AppStateType>()(
   persist(
     (set) => ({
-      theme: 'dark',
+      theme: 'light',
       setTheme: (theme) => set({ theme }),
     }),
     {

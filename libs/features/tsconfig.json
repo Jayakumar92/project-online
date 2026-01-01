@@ -2,20 +2,10 @@
   "extends": "@repo/typescript-config/library.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "outDir": "./dist",
     "types": ["node"],
-    "baseUrl": "../../",
+    "baseUrl": ".",
     "paths": {
-      "@repo/core": ["libs/core/src"],
-      "@repo/core/*": ["libs/core/src/*"],
-      "@repo/utils": ["libs/utils/src"],
-      "@repo/utils/*": ["libs/utils/src/*"],
-      "@repo/store": ["libs/store/src"],
-      "@repo/store/*": ["libs/store/src/*"],
-      "@repo/services": ["libs/services/src"],
-      "@repo/services/*": ["libs/services/src/*"],
-      "@repo/features": ["libs/features/src"],
-      "@repo/features/*": ["libs/features/src/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["src"],

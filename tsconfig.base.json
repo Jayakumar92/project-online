@@ -16,22 +16,18 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@repo/core": ["libs/core/src"],
+      // Core package - wildcard for all folders
       "@repo/core/*": ["libs/core/src/*"],
-      "@repo/utils": ["libs/utils/src"],
+      // Utils package - wildcard for all folders
       "@repo/utils/*": ["libs/utils/src/*"],
-      "@repo/store": ["libs/store/src"],
+      // Store package - main export and wildcard for sub-modules
+      "@repo/store": ["libs/store/src/index.ts"],
       "@repo/store/*": ["libs/store/src/*"],
-      "@repo/services": ["libs/services/src"],
+      // Services package - main export and wildcard for sub-modules
+      "@repo/services": ["libs/services/src/index.ts"],
       "@repo/services/*": ["libs/services/src/*"],
-      "@repo/features": ["libs/features/src"],
-      "@repo/features/*": ["libs/features/src/*"],
-      "@repo/eslint-config": ["libs/eslint-config"],
-      "@repo/eslint-config/*": ["libs/eslint-config/*"],
-      "@repo/prettier-config": ["libs/prettier-config"],
-      "@repo/prettier-config/*": ["libs/prettier-config/*"],
-      "@repo/typescript-config": ["libs/typescript-config"],
-      "@repo/typescript-config/*": ["libs/typescript-config/*"]
+      // Features package - wildcard for all folders
+      "@repo/features/*": ["libs/features/src/*"]
     },
     "types": ["node"],
     "esModuleInterop": true,

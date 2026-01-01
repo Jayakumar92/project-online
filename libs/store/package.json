@@ -1,33 +1,22 @@
 {
   "name": "@repo/store",
-  "version": "0.0.0",
   "private": true,
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+    "./*": {
+      "types": "./src/*",
+      "default": "./src/*"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
-    "tsup": "^8.0.2",
     "typescript": "5.5.4"
   },
   "dependencies": {

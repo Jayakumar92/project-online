@@ -1,40 +1,22 @@
 {
   "name": "@repo/services",
-  "version": "0.0.0",
   "private": true,
   "exports": {
-    "./api": {
-      "types": "./dist/api.d.ts",
-      "import": "./dist/api.mjs",
-      "require": "./dist/api.js"
-    },
-    "./axios": {
-      "types": "./dist/axios.d.ts",
-      "import": "./dist/axios.mjs",
-      "require": "./dist/axios.js"
-    },
-    "./fetch": {
-      "types": "./dist/fetch.d.ts",
-      "import": "./dist/fetch.mjs",
-      "require": "./dist/fetch.js"
+    "./*": {
+      "types": "./src/*",
+      "default": "./src/*"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
-    "tsup": "^8.0.2",
     "typescript": "5.5.4"
   },
   "dependencies": {
