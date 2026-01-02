@@ -1,10 +1,14 @@
 import { z } from 'zod';
 
-// Re-export zod for convenience
+import { APP_ADMIN_NAME } from '../constants/index';
+
+export const APP_NAME_VALID = APP_ADMIN_NAME + 'test';
+
 export { z } from 'zod';
 
 export const errorResponseSchema = z.object({
   success: z.literal(false),
+
   display: z.boolean(),
   status: z.literal('Bad Request'),
   error_message: z.string(),
