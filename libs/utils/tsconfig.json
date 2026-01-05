@@ -2,9 +2,9 @@
   "extends": "@repo/typescript-config/library.json",
   "compilerOptions": {
     "types": ["node"],
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/repo/utils/*": ["src/*"]
     }
   },
   "include": ["src"],

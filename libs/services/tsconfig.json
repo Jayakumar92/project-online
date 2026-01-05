@@ -4,7 +4,7 @@
     "types": ["node"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@repo/services/*": ["src/*"]
     }
   },
   "include": ["src"],
