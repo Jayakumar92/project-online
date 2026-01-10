@@ -1,15 +1,10 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Disable interactive prompts during git hooks (prevents Nx Console installation prompt)
+# Disable interactive prompts during git hooks
 export CI=true
 
 echo "🔍 Running pre-commit checks..."
-
-echo "📝 Checking code formatting..."
-pnpm format:check || {
-  echo "⚠️  Prettier check failed. Files will be auto-formatted by lint-staged."
-}
 
 echo "🔎 Running type check on affected projects..."
 pnpm nx affected --target=typecheck || {
