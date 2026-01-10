@@ -1,7 +1,7 @@
 {
-  "name": "ui",
+  "name": "shared",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ui/src",
+  "sourceRoot": "libs/ui/shadcn/src",
   "projectType": "library",
   "tags": ["type:lib", "scope:shared"],
   "targets": {
@@ -10,7 +10,7 @@
       "outputs": [],
       "options": {
         "command": "echo 'No build step needed - using source files directly'",
-        "cwd": "libs/ui"
+        "cwd": "{projectRoot}"
       }
     },
     "lint": {
@@ -19,8 +19,8 @@
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "tsc --project tsconfig.typecheck.json",
-        "cwd": "libs/ui"
+        "command": "tsc --project {projectRoot}/tsconfig.typecheck.json",
+        "cwd": "{workspaceRoot}"
       }
     }
   }

@@ -3,7 +3,7 @@
 import { APP_NAME_VALID } from '@repo/core/validations';
 import { API_FEATURES_AUTH } from '@repo/features/auth/api';
 import { useAppStore } from '@repo/store';
-import { Button } from '@repo/ui/components/button';
+import { Button } from '@repo/ui/shadcn/components/button';
 import { ifObjectExist } from '@repo/utils/collections';
 
 export default function Home() {

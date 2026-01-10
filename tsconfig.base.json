@@ -16,21 +16,12 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      // Core package - wildcard for all folders
       "@repo/core/*": ["libs/core/src/*"],
-      // Utils package - wildcard for all folders
       "@repo/utils/*": ["libs/utils/src/*"],
-      // Store package - main export and wildcard for sub-modules
-      "@repo/store": ["libs/store/src/index.ts"],
       "@repo/store/*": ["libs/store/src/*"],
-      // Services package - main export and wildcard for sub-modules
-      "@repo/services": ["libs/services/src/index.ts"],
       "@repo/services/*": ["libs/services/src/*"],
-      // Features package - wildcard for all folders
       "@repo/features/*": ["libs/features/src/*"],
-      // UI package - main export and wildcard for sub-modules
-      "@repo/ui": ["libs/ui/src/index.ts"],
-      "@repo/ui/*": ["libs/ui/src/*"]
+      "@repo/ui/shadcn/*": ["libs/ui/shadcn/src/*"]
     },
     "types": ["node"],
     "esModuleInterop": true,

@@ -2,14 +2,13 @@
 @import 'tailwindcss';
 
 /* Tell Tailwind v4 where to scan for classes */
-@source "../../../libs/ui/src/**/*.{js,ts,jsx,tsx}";
+@source "../../../libs/ui/shadcn/src/**/*.{js,ts,jsx,tsx}";
 @source "./**/*.{js,ts,jsx,tsx,mdx}";
 @source "../components/**/*.{js,ts,jsx,tsx,mdx}";
 
 @import 'tw-animate-css';
 
-@import '@repo/ui/styles/globals.css';
-/* UI Library Theme Variables */
+@import '../../../libs/ui/shadcn/src/styles/globals.css';
 
 /* Base styles using Tailwind (must be after Tailwind import) */
 @layer base {

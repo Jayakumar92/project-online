@@ -10,7 +10,7 @@
       "@repo/services": ["../../libs/services/src/index.ts"],
       "@repo/services/*": ["../../libs/services/src/*"],
       "@repo/features/*": ["../../libs/features/src/*"],
-      "@repo/ui/*": ["../../libs/ui/src/*"]
+      "@repo/ui/shadcn/*": ["../../libs/ui/shadcn/src/*"]
     },
     "plugins": [
       {
