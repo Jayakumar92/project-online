@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 import { APP_ADMIN_NAME } from '../constants/index';
 
-export const APP_NAME_VALID = APP_ADMIN_NAME + 'test';
+export const APP_NAME_VALID = APP_ADMIN_NAME + 'test-----updated';
 
 export { z } from 'zod';
 
