@@ -1,3 +1,8 @@
-import baseConfig from "@repo/prettier-config/base.js";
+// prettier.config.mjs
+import config from '@repo/prettier-config/next-js';
 
-export default baseConfig;
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
+ */
+export default config;

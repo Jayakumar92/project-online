@@ -139,3 +139,7 @@ Learn more about Nx:
 - [Nx Cloud](https://nx.app) - Distributed caching and task execution
 - [Nx Console](https://nx.dev/nx-console) - VS Code extension
 - [Nx Recipes](https://nx.dev/recipes) - Common patterns and solutions
+
+Remove-Item -Recurse -Force node_modules, pnpm-lock.yaml
+pnpm install
+pnpm nx reset
