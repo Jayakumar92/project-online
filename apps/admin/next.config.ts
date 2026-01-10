@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     '@repo/store',
     '@repo/services',
     '@repo/features',
+    '@repo/ui',
   ],
 };
 

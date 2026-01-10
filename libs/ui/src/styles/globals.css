@@ -1,15 +1,6 @@
-/* Import Tailwind CSS */
-@import 'tailwindcss';
+/* Theme variables for @repo/ui */
+/* Note: Consuming apps must import tailwindcss before importing this file */
 
-/* Tell Tailwind v4 where to scan for classes */
-@source "../../../libs/ui/src/**/*.{js,ts,jsx,tsx}";
-@source "./**/*.{js,ts,jsx,tsx,mdx}";
-@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
-
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
-
-/* UI Library Theme Variables */
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -97,7 +88,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.87 0 0);
+  --primary: oklch(0.87 0.00 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -122,14 +113,4 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-}
-
-/* Base styles using Tailwind (must be after Tailwind import) */
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }

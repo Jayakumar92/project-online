@@ -27,7 +27,10 @@
       "@repo/services": ["libs/services/src/index.ts"],
       "@repo/services/*": ["libs/services/src/*"],
       // Features package - wildcard for all folders
-      "@repo/features/*": ["libs/features/src/*"]
+      "@repo/features/*": ["libs/features/src/*"],
+      // UI package - main export and wildcard for sub-modules
+      "@repo/ui": ["libs/ui/src/index.ts"],
+      "@repo/ui/*": ["libs/ui/src/*"]
     },
     "types": ["node"],
     "esModuleInterop": true,
