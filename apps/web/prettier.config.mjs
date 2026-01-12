@@ -1,5 +1,5 @@
 // prettier.config.mjs
-import config from '@repo/prettier-config/next-js';
+import config from '@repo/prettier-config/next';
 
 /**
  * @see https://prettier.io/docs/configuration
