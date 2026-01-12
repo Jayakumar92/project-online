@@ -19,7 +19,7 @@
     "@repo/utils": "workspace:*",
     "@repo/store": "workspace:*",
     "@repo/features": "workspace:*",
-    "@repo/ui": "workspace:*"
+    "@repo/ui/shadcn": "workspace:*"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

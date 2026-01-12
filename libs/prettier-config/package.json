@@ -5,9 +5,13 @@
   "private": true,
   "exports": {
     "./base": "./base.js",
+    "./base.js": "./base.js",
     "./next-js": "./next.js",
+    "./next-js.js": "./next.js",
     "./native-js": "./native.js",
-    "./server-js": "./server.js"
+    "./native-js.js": "./native.js",
+    "./server-js": "./server.js",
+    "./server-js.js": "./server.js"
   },
   "license": "MIT",
   "publishConfig": {
