@@ -5,18 +5,18 @@
   "tsx": true,
   "tailwind": {
     "config": "",
-    "css": "@repo/ui/styles/globals.css",
+    "css": "@repo/ui-shadcn/styles/globals.css",
     "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },
   "iconLibrary": "hugeicons",
   "aliases": {
-    "components": "@repo/ui/components",
-    "utils": "@repo/ui/lib/utils",
-    "ui": "@repo/ui/components",
-    "lib": "@repo/ui/lib",
-    "hooks": "@repo/ui/hooks"
+    "components": "@repo/ui-shadcn/components",
+    "utils": "@repo/ui-shadcn/lib/utils",
+    "ui": "@repo/ui-shadcn/components",
+    "lib": "@repo/ui-shadcn/lib",
+    "hooks": "@repo/ui-shadcn/hooks"
   },
   "menuColor": "default",
   "menuAccent": "subtle",

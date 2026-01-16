@@ -4,7 +4,7 @@
     "types": ["node"],
     "baseUrl": ".",
     "paths": {
-      "@repo/ui/shadcn/*": ["src/*"]
+      "@repo/ui-shadcn/*": ["src/*"]
     },
     "jsx": "react-jsx"
   },
