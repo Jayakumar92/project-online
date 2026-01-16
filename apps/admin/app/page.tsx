@@ -1,28 +1,43 @@
 'use client';
 
-import { APP_NAME_VALID } from '@repo/core/validations';
-import { API_FEATURES_AUTH } from '@repo/features/auth/api';
-import { useAppStore } from '@repo/store';
+import * as React from 'react';
+
 import { Button } from '@repo/ui-shadcn/components/button';
-import { ifObjectExist } from '@repo/utils/collections';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@repo/ui-shadcn/components/collapsible';
 
 export default function Home() {
-  const theme = useAppStore((state) => state.theme);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <div className="flex min-h-screen items-center justify-center font-sans">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between px-16 py-32 sm:items-start">
-        <div className="mt-8 flex w-full flex-col items-center gap-4">
-          <div className="flex flex-col gap-2 text-center">
-            <h1>{APP_NAME_VALID}</h1>
+        <Collapsible
+          open={isOpen}
+          onOpenChange={setIsOpen}
+          className="flex w-[350px] flex-col gap-2"
+        >
+          <div className="flex items-center justify-between gap-4 px-4">
+            <h4 className="text-sm font-semibold">{'@peduarte starred 3 repositories'}</h4>
+            <CollapsibleTrigger asChild>
+              <Button variant="ghost" size="icon" className="size-8">
+                <span className="sr-only">{'Toggle'}</span>
+              </Button>
+            </CollapsibleTrigger>
           </div>
-          <p>{ifObjectExist({ name: 'John Doe' }) + '' + theme}</p>
-          <h3>{API_FEATURES_AUTH}</h3>
-
-          {/* Example UI components from @repo/ui */}
-          <Button variant="default">{'Save Changes'}</Button>
-          <Button variant="outline">{'Cancel'}</Button>
-        </div>
+          <div className="rounded-md border px-4 py-2 font-mono text-sm">
+            {'@radix-ui/primitives'}
+          </div>
+          <CollapsibleContent className="flex flex-col gap-2">
+            <div className="rounded-md border px-4 py-2 font-mono text-sm">
+              {'@radix-ui/colors'}
+            </div>
+            <div className="rounded-md border px-4 py-2 font-mono text-sm">{'@stitches/react'}</div>
+          </CollapsibleContent>
+        </Collapsible>
       </main>
     </div>
   );

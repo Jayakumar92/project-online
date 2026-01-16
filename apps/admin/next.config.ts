@@ -9,6 +9,18 @@ const nextConfig: NextConfig = {
     '@repo/features',
     '@repo/ui/shadcn',
   ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

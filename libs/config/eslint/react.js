@@ -8,9 +8,6 @@ import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
 import { config as baseConfig } from './base.js';
 import pluginImport from 'eslint-plugin-import';
-import pluginExpo from 'eslint-plugin-expo';
-import pluginReactNative from 'eslint-plugin-react-native';
-
 import { sharedRules } from './shared-rules.js';
 
 /**
@@ -60,13 +57,9 @@ export const reactJsConfig = [
       react: pluginReact,
       'react-hooks': pluginReactHooks,
       import: pluginImport,
-      'react-native': pluginReactNative,
-      expo: pluginExpo,
     },
     settings: { react: { version: 'detect' } },
     rules: {
-      ...pluginReactNative.configs.all.rules,
-
       // 1. Load Next.js rule sets first
 
       // 2. Load your custom rules/overrides last to ensure precedence

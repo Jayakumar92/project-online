@@ -40,10 +40,6 @@ export const tsRules = {
   curly: 'error',
 
   '@typescript-eslint/array-type': ['warn', { default: 'array' }],
-  '@typescript-eslint/consistent-type-assertions': [
-    'warn',
-    { assertionStyle: 'as', objectLiteralTypeAssertions: 'never' },
-  ],
   '@typescript-eslint/no-explicit-any': 'off',
   '@typescript-eslint/no-unused-vars': [
     'error',
@@ -70,12 +66,16 @@ export const reactRules = {
   'react/function-component-definition': ['error', { namedComponents: 'function-declaration' }],
   'react/jsx-boolean-value': ['error', 'never'],
   'react/destructuring-assignment': ['error', 'always'],
-  'react/boolean-prop-naming': [
+  '@typescript-eslint/naming-convention': [
     'error',
     {
-      rule: '^(is|has|show|have|allow)[A-Z][A-Za-z0-9]+',
+      selector: 'property',
+      types: ['boolean'],
+      format: ['camelCase'],
+      prefix: ['is', 'has', 'show', 'allow', 'can', 'should'],
     },
   ],
+
   'react/forbid-component-props': ['error', { forbid: ['class'] }],
   'react/forbid-dom-props': ['error', { forbid: ['class'] }],
   'react/forbid-elements': ['error', { forbid: ['br', 'select', 'a', 'b', 'img'] }],
