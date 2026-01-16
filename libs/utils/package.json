@@ -13,9 +13,9 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/config-eslint": "workspace:*",
+    "@repo/config-prettier": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
     "@types/node": "^20.11.24",
     "typescript": "5.5.4"
   },

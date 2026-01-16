@@ -1,8 +1,8 @@
 // prettier.config.mjs
-import config from '@repo/prettier-config/next-js';
+import config from '@repo/config-prettier/next';
 
 /**
  * @see https://prettier.io/docs/configuration
- * @type {import("prettier").Config}
+ * @type {import('prettier').Config}
  */
 export default config;

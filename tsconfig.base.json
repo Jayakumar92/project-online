@@ -21,7 +21,9 @@
       "@repo/store/*": ["libs/store/src/*"],
       "@repo/services/*": ["libs/services/src/*"],
       "@repo/features/*": ["libs/features/src/*"],
-      "@repo/ui/shadcn/*": ["libs/ui/shadcn/src/*"]
+      "@repo/ui-shadcn/*": ["libs/ui/shadcn/src/*"],
+      "@repo/config-eslint/*": ["libs/config/eslint/*"],
+      "@repo/config-prettier/*": ["libs/config/prettier/*"]
     },
     "types": ["node"],
     "esModuleInterop": true,

@@ -1,12 +1,12 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@repo/config-eslint",
   "version": "0.0.0",
   "type": "module",
   "private": true,
   "exports": {
     "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./nest-js": "./nest.js",
+    "./next": "./next.js",
+    "./nest": "./nest.js",
     "./react-internal": "./react-internal.js",
     "./library": "./library.js",
     "./react": "./react.js",

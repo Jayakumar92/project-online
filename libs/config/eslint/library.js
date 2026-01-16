@@ -1,6 +1,7 @@
 import { config as baseConfig } from './base.js';
 
 /**
+ *
  * A custom ESLint configuration for Node.js libraries.
  *
  * @type {import("eslint").Linter.Config[]}

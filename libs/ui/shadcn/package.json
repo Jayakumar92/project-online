@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui/shadcn",
+  "name": "@repo/ui-shadcn",
   "private": true,
   "version": "0.1.0",
   "exports": {
@@ -25,9 +25,9 @@
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/config-eslint": "workspace:*",
+    "@repo/config-prettier": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

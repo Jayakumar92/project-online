@@ -1,5 +1,5 @@
 import nx from '@nx/eslint-plugin';
-import { tsBaseConfig } from '@repo/eslint-config/ts-base';
+import { tsBaseConfig } from '@repo/config-eslint/ts-base';
 
 export default [
   // 1. Nx base configurations

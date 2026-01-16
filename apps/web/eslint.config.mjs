@@ -1,5 +1,5 @@
 // eslint.config.mjs
-import { nextJsConfig } from '@repo/eslint-config/next-js';
+import { nextJsConfig } from '@repo/config-eslint/next';
 
 /** @type {import("eslint").Linter.Config[]} */
 export default nextJsConfig;

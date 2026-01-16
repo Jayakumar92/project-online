@@ -3,11 +3,12 @@
 import { APP_NAME_VALID } from '@repo/core/validations';
 import { API_FEATURES_AUTH } from '@repo/features/auth/api';
 import { useAppStore } from '@repo/store';
-import { Button } from '@repo/ui/shadcn/components/button';
+import { Button } from '@repo/ui-shadcn/components/button';
 import { ifObjectExist } from '@repo/utils/collections';
 
 export default function Home() {
   const theme = useAppStore((state) => state.theme);
+
   return (
     <div className="flex min-h-screen items-center justify-center font-sans">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between px-16 py-32 sm:items-start">

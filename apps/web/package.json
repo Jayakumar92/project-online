@@ -17,9 +17,9 @@
     "@repo/store": "workspace:*"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
+    "@repo/config-eslint": "workspace:*",
+    "@repo/config-prettier": "workspace:*",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",

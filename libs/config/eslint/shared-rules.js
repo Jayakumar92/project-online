@@ -1,5 +1,6 @@
 export const tsRules = {
   // Core JS/TS Rules
+
   'no-duplicate-imports': 'error',
   'no-var': 'error',
   'max-lines': [
