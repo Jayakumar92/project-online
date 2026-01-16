@@ -10,7 +10,8 @@
     "./react-internal": "./react-internal.js",
     "./library": "./library.js",
     "./react": "./react.js",
-    "./ts-base": "./ts-base.js"
+    "./ts-base": "./ts-base.js",
+    "./react-native": "./react-native.js"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

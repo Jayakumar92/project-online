@@ -1,5 +1,5 @@
 // eslint.config.mjs
-import { reactJsConfig } from '@repo/config-eslint/react';
+import { reactNativeConfig } from '@repo/config-eslint/react-native';
 
 /** @type {import("eslint").Linter.Config[]} */
-export default reactJsConfig;
+export default reactNativeConfig;
