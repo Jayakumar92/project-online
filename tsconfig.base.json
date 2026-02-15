@@ -21,7 +21,9 @@
       "@repo/store/*": ["libs/store/src/*"],
       "@repo/services/*": ["libs/services/src/*"],
       "@repo/features/*": ["libs/features/src/*"],
+      "@repo/brand/*": ["libs/brand/src/*"],
       "@repo/ui-shadcn/*": ["libs/ui/shadcn/src/*"],
+      "@repo/ui-rnr/*": ["libs/ui/rnr/src/*"],
       "@repo/config-eslint/*": ["libs/config/eslint/*"],
       "@repo/config-prettier/*": ["libs/config/prettier/*"]
     },

@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { useState } from 'react';
 
 import { Button } from '@repo/ui-shadcn/components/button';
 import {
@@ -10,7 +10,7 @@ import {
 } from '@repo/ui-shadcn/components/collapsible';
 
 export default function Home() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="flex min-h-screen items-center justify-center font-sans">

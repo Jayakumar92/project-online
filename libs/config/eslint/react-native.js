@@ -50,11 +50,18 @@ export const reactNativeConfig = [
     settings: { react: { version: 'detect' } },
     rules: {
       ...pluginReactHooks.configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off', // Generally needed for Next.js
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
     },
   },
 
   {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
     plugins: {
       react: pluginReact,
       'react-hooks': pluginReactHooks,
@@ -66,9 +73,7 @@ export const reactNativeConfig = [
     rules: {
       ...pluginReactNative.configs.all.rules,
 
-      // 1. Load Next.js rule sets first
-
-      // 2. Load your custom rules/overrides last to ensure precedence
+      // Load your custom rules/overrides last to ensure precedence
       ...sharedRules,
     },
   },

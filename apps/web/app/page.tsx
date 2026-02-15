@@ -5,6 +5,7 @@ import { useAppStore } from '@repo/store';
 
 export default function Home() {
   const theme = useAppStore((state) => state.theme);
+
   return (
     <section className="flex h-dvh w-full flex-col items-center justify-center bg-sky-200 text-center text-3xl">
       <h6>{APP_ADMIN_NAME}</h6>

@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { ComponentProps } from 'react';
 
 import { Popover as PopoverPrimitive } from '@base-ui/react/popover';
 
@@ -45,7 +45,7 @@ function PopoverContent({
   );
 }
 
-function PopoverHeader({ className, ...props }: React.ComponentProps<'div'>) {
+function PopoverHeader({ className, ...props }: ComponentProps<'div'>) {
   return (
     <div
       data-slot="popover-header"

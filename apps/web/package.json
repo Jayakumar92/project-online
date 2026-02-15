@@ -10,11 +10,13 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "next": "16.0.0",
     "@repo/core": "workspace:*",
-    "@repo/store": "workspace:*"
+    "@repo/store": "workspace:*",
+    "@repo/brand": "workspace:*",
+    "@repo/ui-shadcn": "workspace:*"
   },
   "devDependencies": {
     "@repo/config-typescript": "workspace:*",

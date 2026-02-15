@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { createContext, CSSProperties, useContext } from 'react';
 
 import { Toggle as TogglePrimitive } from '@base-ui/react/toggle';
 import { ToggleGroup as ToggleGroupPrimitive } from '@base-ui/react/toggle-group';
@@ -10,7 +10,7 @@ import { cn } from '../lib/utils';
 
 import { toggleVariants } from './toggle';
 
-const ToggleGroupContext = React.createContext<
+const ToggleGroupContext = createContext<
   VariantProps<typeof toggleVariants> & {
     spacing?: number;
     orientation?: 'horizontal' | 'vertical';
@@ -42,7 +42,7 @@ function ToggleGroup({
       data-size={size}
       data-spacing={spacing}
       data-orientation={orientation}
-      style={{ '--gap': spacing } as React.CSSProperties}
+      style={{ '--gap': spacing } as CSSProperties}
       className={cn(
         'data-[spacing=0]:data-[variant=outline]:shadow-xs group/toggle-group flex w-fit flex-row items-center gap-[--spacing(var(--gap))] rounded-md data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-stretch',
         className,
@@ -63,7 +63,7 @@ function ToggleGroupItem({
   size = 'default',
   ...props
 }: TogglePrimitive.Props & VariantProps<typeof toggleVariants>) {
-  const context = React.useContext(ToggleGroupContext);
+  const context = useContext(ToggleGroupContext);
 
   return (
     <TogglePrimitive

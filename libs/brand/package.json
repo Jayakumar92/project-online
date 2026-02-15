@@ -1,0 +1,24 @@
+{
+  "name": "@repo/brand",
+  "private": true,
+  "version": "0.1.0",
+  "exports": {
+    "./*": {
+      "types": "./src/*",
+      "default": "./src/*"
+    },
+    "./styles/*": "./src/styles/*"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/config-eslint": "workspace:*",
+    "@repo/config-prettier": "workspace:*",
+    "@repo/config-typescript": "workspace:*",
+    "prettier": "^3.6.2",
+    "typescript": "^5"
+  }
+}

@@ -2,9 +2,8 @@
   "extends": "../../config/typescript/library.json",
   "compilerOptions": {
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "baseUrl": ".",
     "paths": {
-      "@repo/ui-shadcn/*": ["src/*"]
+      "@repo/ui-shadcn/*": ["${configDir}/src/*"]
     },
     "jsx": "react-jsx"
   },

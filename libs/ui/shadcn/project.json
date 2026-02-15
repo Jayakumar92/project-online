@@ -1,5 +1,5 @@
 {
-  "name": "shared",
+  "name": "ui-shadcn",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/shadcn/src",
   "projectType": "library",

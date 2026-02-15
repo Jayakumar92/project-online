@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
     '@repo/store',
     '@repo/services',
     '@repo/features',
-    '@repo/ui/shadcn',
+    '@repo/brand',
+    '@repo/ui-shadcn',
   ],
   images: {
     remotePatterns: [

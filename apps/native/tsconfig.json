@@ -1,6 +1,7 @@
 {
   "extends": ["expo/tsconfig.base", "../../tsconfig.base.json"],
   "compilerOptions": {
+    "jsx": "react-jsx",
     "strict": true,
     "baseUrl": ".",
     "module": "esnext",
@@ -16,8 +17,10 @@
       "@repo/services": ["../../libs/services/src"],
       "@repo/services/*": ["../../libs/services/src/*"],
       "@repo/features": ["../../libs/features/src"],
-      "@repo/features/*": ["../../libs/features/src/*"]
+      "@repo/features/*": ["../../libs/features/src/*"],
+      "@repo/ui-rnr": ["../../libs/ui/rnr/src"],
+      "@repo/ui-rnr/*": ["../../libs/ui/rnr/src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "nativewind-env.d.ts"]
 }
