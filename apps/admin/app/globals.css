@@ -8,7 +8,7 @@
 
 @import 'tw-animate-css';
 
-@import '../../../libs/ui/shadcn/src/styles/globals.css';
+@import '@repo/ui-shadcn/styles';
 
 /* Base styles using Tailwind (must be after Tailwind import) */
 @layer base {

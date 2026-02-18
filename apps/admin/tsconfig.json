@@ -1,17 +1,6 @@
 {
   "extends": ["../../libs/config/typescript/nextjs.json", "../../tsconfig.base.json"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@repo/core/*": ["../../libs/core/src/*"],
-      "@repo/utils/*": ["../../libs/utils/src/*"],
-      "@repo/store": ["../../libs/store/src/index.ts"],
-      "@repo/store/*": ["../../libs/store/src/*"],
-      "@repo/services": ["../../libs/services/src/index.ts"],
-      "@repo/services/*": ["../../libs/services/src/*"],
-      "@repo/features/*": ["../../libs/features/src/*"],
-      "@repo/ui-shadcn/*": ["../../libs/ui/shadcn/src/*"]
-    },
     "plugins": [
       {
         "name": "next"

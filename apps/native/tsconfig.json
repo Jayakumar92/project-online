@@ -8,17 +8,12 @@
     "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./*"],
-      "@repo/core": ["../../libs/core/src"],
       "@repo/core/*": ["../../libs/core/src/*"],
-      "@repo/store": ["../../libs/store/src"],
-      "@repo/store/*": ["../../libs/store/src/*"],
-      "@repo/utils": ["../../libs/utils/src"],
       "@repo/utils/*": ["../../libs/utils/src/*"],
-      "@repo/services": ["../../libs/services/src"],
+      "@repo/store/*": ["../../libs/store/src/*"],
       "@repo/services/*": ["../../libs/services/src/*"],
-      "@repo/features": ["../../libs/features/src"],
       "@repo/features/*": ["../../libs/features/src/*"],
-      "@repo/ui-rnr": ["../../libs/ui/rnr/src"],
+      "@repo/brand/*": ["../../libs/brand/src/*"],
       "@repo/ui-rnr/*": ["../../libs/ui/rnr/src/*"]
     }
   },

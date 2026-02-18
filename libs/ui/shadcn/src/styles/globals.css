@@ -1,7 +1,7 @@
 /* Theme variables for @repo/ui */
 /* Note: Consuming apps must import tailwindcss before importing this file */
 
-@import '../../../../brand/src/styles/web-tokens.css';
+@import '@repo/brand/styles/web-tokens.css';
 
 @custom-variant dark (&:is(.dark *));
 
