@@ -4,8 +4,8 @@
 /* Tell Tailwind v4 where to scan for classes */
 @source "../../../libs/ui/shadcn/src/**/*.{js,ts,jsx,tsx}";
 @source "./**/*.{js,ts,jsx,tsx,mdx}";
-@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
 
+@import '@repo/brand/styles/web-tokens.css';
 @import '@repo/ui-shadcn/styles';
 
 /* Base styles using Tailwind (must be after Tailwind import) */

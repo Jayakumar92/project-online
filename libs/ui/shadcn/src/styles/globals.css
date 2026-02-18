@@ -1,7 +1,5 @@
-/* Theme variables for @repo/ui */
-/* Note: Consuming apps must import tailwindcss before importing this file */
-
-@import '@repo/brand/styles/web-tokens.css';
+/* Theme mappings for shadcn/ui components */
+/* Note: Consuming apps must import @repo/brand tokens before this file */
 
 @custom-variant dark (&:is(.dark *));
 
