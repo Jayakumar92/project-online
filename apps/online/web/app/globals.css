@@ -1,0 +1,23 @@
+/* Import Tailwind CSS v4 */
+@import 'tailwindcss';
+
+/* Tell Tailwind v4 where to scan for classes */
+@source "../../../../libs/ui/shadcn/src/**/*.{js,ts,jsx,tsx}";
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+
+@import 'tw-animate-css';
+
+/* Online project brand tokens (oklch) */
+@import '@repo/brand/styles/online/web-tokens.css';
+
+/* shadcn theme mappings: CSS vars → Tailwind --color-* utilities */
+@import '@repo/ui-shadcn/styles';
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

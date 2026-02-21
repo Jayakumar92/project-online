@@ -1,0 +1,60 @@
+{
+  "name": "online-admin",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/online/admin",
+  "projectType": "application",
+  "tags": ["type:app", "framework:next", "scope:online"],
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/online/admin"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "online-admin:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "online-admin:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "online-admin:build:production",
+          "dev": false
+        }
+      }
+    },
+    "dev": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "online-admin:build",
+        "dev": true
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "online-admin:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "typecheck": {
+      "executor": "@nx/js:tsc",
+      "options": {
+        "tsConfig": "apps/online/admin/tsconfig.json",
+        "main": "apps/online/admin/app/page.tsx",
+        "outputPath": "dist/apps/online/admin"
+      }
+    }
+  }
+}

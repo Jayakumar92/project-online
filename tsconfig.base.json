@@ -20,7 +20,6 @@
       "@repo/utils/*": ["libs/utils/src/*"],
       "@repo/store/*": ["libs/store/src/*"],
       "@repo/services/*": ["libs/services/src/*"],
-      "@repo/features/*": ["libs/features/src/*"],
       "@repo/brand/*": ["libs/brand/src/*"],
       "@repo/ui-shadcn/*": ["libs/ui/shadcn/src/*"],
       "@repo/ui-rnr/*": ["libs/ui/rnr/src/*"],

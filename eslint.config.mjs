@@ -24,9 +24,32 @@ export default [
           enforceBuildableLibDependency: true,
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
+            // Shared libs (scope:shared) may only depend on other shared libs.
+            // Prevents shared libs from importing project-specific code.
             {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
+              sourceTag: 'scope:shared',
+              onlyDependOnLibsWithTags: ['scope:shared'],
+            },
+            // Online project — can import shared libs or other online-scoped items only.
+            // Cross-project imports (online → education) are forbidden.
+            {
+              sourceTag: 'scope:online',
+              onlyDependOnLibsWithTags: ['scope:shared', 'scope:online'],
+            },
+            // Education project — same isolation pattern.
+            {
+              sourceTag: 'scope:education',
+              onlyDependOnLibsWithTags: ['scope:shared', 'scope:education'],
+            },
+            // Commerce project — same isolation pattern.
+            {
+              sourceTag: 'scope:commerce',
+              onlyDependOnLibsWithTags: ['scope:shared', 'scope:commerce'],
+            },
+            // Libraries (type:lib) cannot import applications (type:app).
+            {
+              sourceTag: 'type:lib',
+              onlyDependOnLibsWithTags: ['type:lib'],
             },
           ],
         },

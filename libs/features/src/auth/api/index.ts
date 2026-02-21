@@ -1,1 +1,0 @@
-export const API_FEATURES_AUTH = 'FEATURES_API';

@@ -1,0 +1,20 @@
+{
+  "extends": ["../../../libs/config/typescript/nestjs.json", "../../../tsconfig.base.json"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "types": ["node", "jest"],
+    "baseUrl": ".",
+    "paths": {
+      "@repo/core": ["../../../libs/core/src"],
+      "@repo/core/*": ["../../../libs/core/src/*"],
+      "@repo/utils": ["../../../libs/utils/src"],
+      "@repo/utils/*": ["../../../libs/utils/src/*"],
+      "@repo/store": ["../../../libs/store/src"],
+      "@repo/store/*": ["../../../libs/store/src/*"],
+      "@repo/services": ["../../../libs/services/src"],
+      "@repo/services/*": ["../../../libs/services/src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "eslint.config.mjs", "prettier.config.mjs"],
+  "exclude": ["node_modules", "dist"]
+}

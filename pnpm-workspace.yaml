@@ -1,4 +1,4 @@
 packages:
-  - "apps/*"
+  - "apps/**/*"    # nested project apps: apps/online/admin, apps/education/web, etc.
   - "libs/*"
   - "libs/**"
