@@ -1,5 +1,5 @@
 {
-  "name": "project-online",
+  "name": "platform",
   "private": true,
   "scripts": {
     "build": "nx run-many --target=build --all",
