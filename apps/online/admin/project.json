@@ -36,7 +36,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "online-admin:build",
-        "dev": true
+        "dev": true,
+        "turbopack": false
       }
     },
     "export": {

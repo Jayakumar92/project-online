@@ -25,6 +25,13 @@
         "cwd": "apps/online/native"
       }
     },
+    "tunnel": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "expo start --tunnel",
+        "cwd": "apps/online/native"
+      }
+    },
     "android": {
       "executor": "nx:run-commands",
       "options": {

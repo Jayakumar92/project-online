@@ -36,7 +36,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "online-web:build",
-        "dev": true
+        "dev": true,
+        "turbopack": false
       }
     },
     "lint": {

@@ -98,6 +98,25 @@ export type NavTheme = {
   };
 };
 
+export type NativeVars = {
+  light: Record<string, string>;
+  dark: Record<string, string>;
+};
+
+export function generateNativeVars(config: BrandConfig): NativeVars {
+  const toVars = (mode: 'light' | 'dark') => {
+    const vars: Record<string, string> = {};
+    for (const [key, cssVar] of Object.entries(COLOR_CSS_MAP)) {
+      const themed = config.colors[key as keyof BrandColors] as ThemedColor;
+      vars[`--${cssVar}`] = themed[mode].hsl;
+    }
+    vars['--radius'] = config.radius;
+    return vars;
+  };
+
+  return { light: toVars('light'), dark: toVars('dark') };
+}
+
 export function generateNavTheme(config: BrandConfig): NavTheme {
   const { colors } = config;
   return {

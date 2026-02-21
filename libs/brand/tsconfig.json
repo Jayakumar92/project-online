@@ -1,11 +1,11 @@
 {
   "extends": "../../libs/config/typescript/library.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "types": ["node"],
     "paths": {
-      "@repo/brand/*": ["src/*"]
+      "@repo/brand/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "scripts"],
   "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
 }

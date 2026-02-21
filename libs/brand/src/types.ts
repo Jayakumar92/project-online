@@ -61,19 +61,7 @@ export type BrandConfig = {
   colors: BrandColors;
   flags: BrandFlags;
   radius: string;
-  /** Which product namespace this brand belongs to. Used by loaders and token generators. */
-  project?: 'online' | 'education' | 'commerce';
+  project?: 'online';
 };
 
-export type BrandId =
-  // Base brands (backward compat)
-  | 'default'
-  | 'example'
-  // Online project brands
-  | 'online-default'
-  | 'online-client-a'
-  | 'online-client-b'
-  // Education project brands
-  | 'education-default'
-  // Commerce project brands
-  | 'commerce-default';
+export type BrandId = 'online-default' | 'online-client-a';
